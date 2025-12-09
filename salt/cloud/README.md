@@ -62,12 +62,10 @@ to take effect.
 
 ## Usage
 
-The development qube `cloud` can be used for:
+The operations qube `cloud` can be used for:
 
 *   cloud (in particular, kubernetes) operations;
 *   helm chart development and validation;
+*   use `mise` for additional software as needed;
 *   signing commits, tags, pushes and verifying with split-gpg;
 *   fetching and pushing to and from local qube repository with split-git; and
-*   fetching and pushing to and from remote repository with split-ssh-agent
-    and without direct network connection, you can open port to the desired
-    SSH or HTTP server.
