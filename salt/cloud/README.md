@@ -13,8 +13,7 @@ Development environment in Qubes OS.
 
 Setup a devops qube named "cloud", dedicated to contributing to Cloud and
 kubernetes operations. As there is a very broad set of repositories, only
-common packages will be installed. The qube has no netvm but can reach remote
-servers if the policy allows.
+common packages will be installed.
 
 ## Installation
 
@@ -24,10 +23,6 @@ servers if the policy allows.
 sudo qubesctl top.enable cloud
 sudo qubesctl --targets=tpl-cloud,dvm-cloud,cloud state.apply
 sudo qubesctl top.disable cloud
-proxy_target="$(qusal-report-updatevm-origin)"
-if test -n "${proxy_target}"; then
-  sudo qubesctl --skip-dom0 --targets="${proxy_target}" state.apply sys-net.install-proxy
-fi
 ```
 
 *   State:
@@ -50,7 +45,7 @@ fi
 If you want some Python goodies, you can install them:
 
 ```sh
-sudo qubesctl --skip-dom0 --targets=tpl-dev state.apply dev.install-python-tools
+sudo qubesctl --skip-dom0 --targets=tpl-cloud state.apply dev.install-python-tools
 ```
 
 The installation will make the Qusal TCP Proxy available in the `updatevm`
@@ -65,30 +60,14 @@ sudo qubesctl --skip-dom0 --targets=TEMPLATE state.apply sys-net.install-proxy
 Remember to restart the `netvms` after the proxy installation for the changes
 to take effect.
 
-## Access Control
-
-_Default policy_: `denies` `all` qubes from calling `qusal.ConnectTCP`
-
-Allow qube `dev` to `connect` to `github.com:22` via `disp-sys-net` but not to
-any other host or via any other qube:
-
-```qrexecpolicy
-qusal.ConnectTCP +github.com+22 dev @default allow target=disp-sys-net
-qusal.ConnectTCP *              dev @anyvm   deny
-```
-
 ## Usage
 
-The development qube `dev` can be used for:
+The development qube `cloud` can be used for:
 
-*   code development;
-*   building programs;
+*   cloud (in particular, kubernetes) operations;
+*   helm chart development and validation;
 *   signing commits, tags, pushes and verifying with split-gpg;
 *   fetching and pushing to and from local qube repository with split-git; and
 *   fetching and pushing to and from remote repository with split-ssh-agent
     and without direct network connection, you can open port to the desired
     SSH or HTTP server.
-
-As the `dev` qube has no netvm, configure the Qrexec policy to allow or ask
-calls to the `qusal.ConnectTCP` RPC service, so the qube can communicate with
-a remote repository for example.

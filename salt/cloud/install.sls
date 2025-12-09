@@ -1,5 +1,5 @@
 {#
-SPDX-FileCopyrightText: 2023 - 2025 Benjamin Grande M. S. <ben.grande.b@gmail.com>
+SPDX-FileCopyrightText: 2023 - 2025 wassp <cyberwassp@gmail.com>
 
 SPDX-License-Identifier: AGPL-3.0-or-later
 #}
@@ -18,7 +18,9 @@ include:
     - skip_suggestions: True
     - setopt: "install_weak_deps=False"
     - pkgs:
+      - qubes-core-agent-networking # adds internet connectivity
       - kubectx # Installs kubens as well
       - helm
+      - mise
 
 {% endif -%}
