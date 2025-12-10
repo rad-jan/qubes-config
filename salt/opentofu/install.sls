@@ -10,6 +10,7 @@ include:
   - {{ slsdotpath }}.install-repo
   - utils.tools.common.update
   - sys-ssh-agent.install-client
+  - sys-gpg.install-client
 
 "{{ slsdotpath }}-installed":
   pkg.installed:
@@ -21,6 +22,7 @@ include:
     - setopt: "install_weak_deps=False"
     - pkgs:
       - qubes-core-agent-networking
+      - qubes-core-agent-passwordless-root
       - ca-certificates
       - tofu
       - vim
