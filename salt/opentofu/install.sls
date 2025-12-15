@@ -22,7 +22,6 @@ include:
     - setopt: "install_weak_deps=False"
     - pkgs:
       - qubes-core-agent-networking
-      - qubes-core-agent-passwordless-root
       - ca-certificates
       - tofu
       - vim

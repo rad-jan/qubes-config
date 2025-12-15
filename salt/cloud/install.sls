@@ -19,16 +19,8 @@ include:
     - setopt: "install_weak_deps=False"
     - pkgs:
       - qubes-core-agent-networking # adds internet connectivity
-      # - kubectx # Installs kubens as well
-      # - helm
-mise-repo:
-  copr.enabled:
-    - name: jdxcode/mise
-
-mise:
-  pkg.installed:
-    - require:
-      - copr: mise-repo
-
+      - kubectx # Installs kubens as well
+      - helm
+      - redis-tools
 
 {% endif -%}

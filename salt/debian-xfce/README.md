@@ -18,7 +18,7 @@ Creates the Debian Xfce Template as well as a Disposable Template based on it.
 
 ```sh
 sudo qubesctl top.enable debian-xfce
-sudo qubesctl --targets=debian-12-xfce state.apply
+sudo qubesctl --targets=debian-13-xfce state.apply
 sudo qubesctl top.disable debian-xfce
 ```
 
@@ -28,7 +28,7 @@ sudo qubesctl top.disable debian-xfce
 
 ```sh
 sudo qubesctl state.apply debian-xfce.create
-sudo qubesctl --skip-dom0 --targets=debian-12-xfce state.apply debian-xfce.install
+sudo qubesctl --skip-dom0 --targets=debian-13-xfce state.apply debian-xfce.install
 ```
 
 <!-- pkg:end:post-install -->

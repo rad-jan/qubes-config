@@ -5,7 +5,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 #}
 
 {% set base = 'debian' -%}
-{% set version = salt['pillar.get']('qvm:debian:version', '12') -%}
+{% set version = salt['pillar.get']('qvm:debian:version', '13') -%}
 {% set flavor = '' -%}
 {% set repo = salt['pillar.get']('qvm:debian:repo', 'qubes-templates-itl') -%}
 {% if flavor -%}

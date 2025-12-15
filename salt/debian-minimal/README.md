@@ -19,7 +19,7 @@ it.
 
 ```sh
 sudo qubesctl top.enable debian-minimal
-sudo qubesctl --targets=debian-12-minimal state.apply
+sudo qubesctl --targets=debian-13-minimal state.apply
 sudo qubesctl top.disable debian-minimal
 ```
 
@@ -29,7 +29,7 @@ sudo qubesctl top.disable debian-minimal
 
 ```sh
 sudo qubesctl state.apply debian-minimal.create
-sudo qubesctl --skip-dom0 --targets=debian-12-minimal state.apply debian-minimal.install
+sudo qubesctl --skip-dom0 --targets=debian-13-minimal state.apply debian-minimal.install
 ```
 
 <!-- pkg:end:post-install -->
