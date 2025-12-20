@@ -11,9 +11,7 @@ Development environment in Qubes OS.
 
 ## Description
 
-Setup a devops qube named "cloud", dedicated to contributing to Cloud and
-kubernetes operations. As there is a very broad set of repositories, only
-common packages will be installed.
+Setup a devops qube named "cloud", dedicated to AWS and kubernetes operations. As there is a very broad set of repositories, only common packages will be installed.
 
 ## Installation
 
@@ -42,11 +40,6 @@ fi
 
 <!-- pkg:end:post-install -->
 
-If you want some Python goodies, you can install them:
-
-```sh
-sudo qubesctl --skip-dom0 --targets=tpl-cloud state.apply dev.install-python-tools
-```
 
 The installation will make the Qusal TCP Proxy available in the `updatevm`
 (after it is restarted in case it is template based). If you want to have the
@@ -64,8 +57,6 @@ to take effect.
 
 The operations qube `cloud` can be used for:
 
-*   cloud (in particular, kubernetes) operations;
-*   helm chart development and validation;
-*   use `mise` for additional software as needed;
-*   signing commits, tags, pushes and verifying with split-gpg;
-*   fetching and pushing to and from local qube repository with split-git; and
+*   cloud (in particular, kubernetes) operations and monitoring;
+*   helm chart validation and deployments;
+*   fetching and pushing to and from local qube repository with split-git;

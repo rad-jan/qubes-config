@@ -8,7 +8,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
 include:
   - dev.install-common
-  - dev.install-python-tools
 
 "{{ slsdotpath }}-installed":
   pkg.installed:
@@ -19,8 +18,11 @@ include:
     - setopt: "install_weak_deps=False"
     - pkgs:
       - qubes-core-agent-networking # adds internet connectivity
-      - kubectx # Installs kubens as well
+      - qubes-core-agent-passwordless-root # adds internet connectivity
+      - kubernetes1.34-client
+      - k9s
       - helm
-      - redis-tools
+      - git
+      - valkey # drop-in replacement for redis-cli
 
 {% endif -%}
