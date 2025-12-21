@@ -37,7 +37,6 @@ prefs:
 - include_in_backups: True
 features:
 - enable:
-  - service.split-gpg2-client
   - service.qusal-proxy-client
   - service.crond
 - disable:

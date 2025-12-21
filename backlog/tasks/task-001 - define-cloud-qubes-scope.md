@@ -53,4 +53,6 @@ Tools enumeration for `cloud` qube:
   * `hubble cli` - not available natively
   * `cloud-nuke` - not available natively
   * `kubecolor` (OPTIONAL: not sure I need that really)
+
+NOTE: most of these tools can be handled by `mise` tool,
 <!-- SECTION:NOTES:END -->
