@@ -27,16 +27,22 @@ include:
       - qubes-core-agent-networking # adds internet connectivity
       - qubes-core-agent-passwordless-root
       - ca-certificates
-      # - kubernetes1.34-client
-      # - k9s
-      # - helm
+      - kubernetes1.35-client
+      - k9s
+      - kubectx
+      - jq
+      - jqp
+      - yq
+      - xxd
+      - firefox-esr
+      - helm
       - git
       - man-db
       - valkey # drop-in replacement for redis-cli
       ## Searching files
       - file
       - tree
-      - riprgep
+      - ripgrep
       - fzf
       ## Usability
       - tmux

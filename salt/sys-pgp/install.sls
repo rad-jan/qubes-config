@@ -23,12 +23,14 @@ include:
       - man-db
 
 {# TODO: sequoia-wot can't be installed on fedora-41 #}
+{# 'sq-wot' once merged to trixie #}
+
 {% set pkg = {
   'Debian': {
-    'pkg': ['sq', 'sqop', 'sqv'], # 'sq-wot' once merged to trixie
+    'pkg': ['sq', 'sqop', 'sqv'],
   },
   'RedHat': {
-    'pkg': ['sequoia-sq', 'sequoia-keyring-linter', 'sequoia-sop',
+    'pkg': ['sequoia-sq', 'sequoia-sop',
             'sequoia-sqv', 'sequoia-policy-config',
             'sequoia-chameleon-gnupg'],
   },
