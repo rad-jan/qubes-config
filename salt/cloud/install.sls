@@ -27,18 +27,14 @@ include:
       - qubes-core-agent-networking # adds internet connectivity
       - qubes-core-agent-passwordless-root
       - ca-certificates
-      - kubernetes1.35-client
-      - k9s
       - kubectx
       - jq
       - jqp
-      - yq
       - xxd
       - firefox-esr
-      - helm
       - git
       - man-db
-      - valkey # drop-in replacement for redis-cli
+      - mise # polyglot tool/runtime version manager (repo added in install-repo)
       ## Searching files
       - file
       - tree

@@ -7,7 +7,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 {% if grains['nodename'] != 'dom0' -%}
 
 include:
-  - {{ slsdotpath }}.home-cleanup
+  - dev.home-cleanup
   - dotfiles.copy-all
 
 {% endif -%}
