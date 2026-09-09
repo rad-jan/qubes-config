@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 %define project         dotfiles
-%define license_csv     AGPL-3.0-or-later,BSD-2-Clause,CC-BY-SA-3.0,CC-BY-SA-4.0,GFDL-1.3-or-later,GPL-2.0-only,GPL-3.0-only,GPL-3.0-or-later,MIT,Vim
+%define license_csv     AGPL-3.0-or-later,BSD-2-Clause,CC-BY-SA-3.0,CC-BY-SA-4.0,GFDL-1.3-or-later,GPL-2.0-only,GPL-3.0-only,GPL-3.0-or-later,MIT,OFL-1.1,Vim
 ## Reproducibility.
 %define source_date_epoch_from_changelog 1
 %define use_source_date_epoch_as_buildtime 1
@@ -22,7 +22,7 @@ Summary:        Dotfiles
 Group:          qusal
 Packager:       %{?_packager}%{!?_packager:Ben Grande <ben.grande.b@gmail.com>}
 Vendor:         Ben Grande
-License:        AGPL-3.0-or-later AND BSD-2-Clause AND CC-BY-SA-3.0 AND CC-BY-SA-4.0 AND GFDL-1.3-or-later AND GPL-2.0-only AND GPL-3.0-only AND GPL-3.0-or-later AND MIT AND Vim
+License:        AGPL-3.0-or-later AND BSD-2-Clause AND CC-BY-SA-3.0 AND CC-BY-SA-4.0 AND GFDL-1.3-or-later AND GPL-2.0-only AND GPL-3.0-only AND GPL-3.0-or-later AND MIT AND OFL-1.1 AND Vim
 URL:            https://github.com/ben-grande/qusal
 BugURL:         https://github.com/ben-grande/qusal/issues
 Source0:        %{name}-%{version}.tar.gz
@@ -44,7 +44,7 @@ Configuration and scripts targeting:
     *   Drop-in configuration files
     *   Tested in Qubes OS Dom0, Debian, Fedora, OpenBSD
 *   Tasks:
-    *   GUI: x11, gtk
+    *   GUI: x11, gtk, font
     *   SCM: git, tig, git-shell
     *   Keys: gpg, ssh
     *   Networking: curl, urlview, wget, w3m
